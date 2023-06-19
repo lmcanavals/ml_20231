@@ -43,6 +43,9 @@ dothething() {
 		fi
 	done
 	cd ..
+	mkdir offtest
+	mv test/*off offtest
+	zip -r test.zip test
 
 	cd train
 	for f in *; do
@@ -53,5 +56,8 @@ dothething() {
 		fi
 	done
 	cd ..
+	mkdir offtrain
+	mv train/*off offtrain
+	zip -r train.zip train
 }
 dothething
